@@ -1,5 +1,5 @@
 # QingStor Demo Signature Server API Specs
-English | [中文](./README.zh_CN.md)
+English | [中文](./docs/zh_CN/README.zh_CN.md)
 
 Specifications of QingStor Demo Signature Server API.
 
@@ -102,7 +102,6 @@ Content-Length: 297
     "port": "443",
     "path": "/signature-test-bucket/put-test-file",
     "protocol": "https",
-    "body": "put-test-file-content\n",
     "headers": {
        "Date": "Wed, 16 Aug 2017 07:56:30 GMT",
        "Content-Length": "22",
