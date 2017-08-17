@@ -51,9 +51,6 @@
                     "type": "string"
                   }
                 },
-                "body": {
-                  "type": "string"
-                },
                 "headers": {
                   "type": "object",
                   "additionalProperties": {
@@ -124,9 +121,6 @@
                   "additionalProperties": {
                     "type": "string"
                   }
-                },
-                "body": {
-                  "type": "string"
                 },
                 "headers": {
                   "type": "object",
