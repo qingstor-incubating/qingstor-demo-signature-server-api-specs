@@ -1,5 +1,5 @@
 # 签名服务器接口规范文档
-[English](./README.md) | 中文
+[English](../../README.md) | 中文
 
 本文主要描述了签名服务器的接口。
 
@@ -102,7 +102,6 @@ Content-Length: 297
     "port": "443",
     "path": "/signature-test-bucket/put-test-file",
     "protocol": "https",
-    "body": "put-test-file-content\n",
     "headers": {
        "Date": "Wed, 16 Aug 2017 07:56:30 GMT",
        "Content-Length": "22",
