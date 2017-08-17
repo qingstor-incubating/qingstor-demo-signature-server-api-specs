@@ -1,0 +1,275 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "QingStor Demo Signature Server API Specs",
+    "description": "Describe API of QingStor Demo Signature Server"
+  },
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/operation/query": {
+      "post": {
+        "operationId": "QueryOperation",
+        "summary": "Sign By Query Parameters",
+        "description": "Sign a request to be signed from clients",
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "request_body",
+            "in": "body",
+            "description": "A request of JSON format with Expires to be signed",
+            "required": true,
+            "schema": {
+              "description": "The format of operation request body",
+              "type": "object",
+              "properties": {
+                "method": {
+                  "type": "string"
+                },
+                "schema": {
+                  "type": "string"
+                },
+                "host": {
+                  "type": "string"
+                },
+                "port": {
+                  "type": "string"
+                },
+                "path": {
+                  "type": "string"
+                },
+                "query": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                },
+                "body": {
+                  "type": "string"
+                },
+                "headers": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                },
+                "expires": {
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/QueryResponseBody"
+            }
+          },
+          "400": {
+            "description": "Fail",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "/operation/header": {
+      "post": {
+        "operationId": "HeaderOperation",
+        "summary": "Sign By Authorization Header",
+        "description": "Sign a request to be signed from clients",
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "request_body",
+            "in": "body",
+            "description": "A request of JSON format without Expires to be signed",
+            "required": true,
+            "schema": {
+              "description": "The format of operation header request body",
+              "type": "object",
+              "properties": {
+                "method": {
+                  "type": "string"
+                },
+                "schema": {
+                  "type": "string"
+                },
+                "host": {
+                  "type": "string"
+                },
+                "port": {
+                  "type": "string"
+                },
+                "path": {
+                  "type": "string"
+                },
+                "query": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                },
+                "body": {
+                  "type": "string"
+                },
+                "headers": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/HeaderResponseBody"
+            }
+          },
+          "400": {
+            "description": "Fail",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "/string-to-sign/query": {
+      "post": {
+        "operationId": "QueryStringToSign",
+        "summary": "Sign By Query Parameters",
+        "description": "Sign a well constructed string with Expires",
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "request_body",
+            "in": "body",
+            "description": "A string to sign",
+            "required": true,
+            "schema": {
+              "description": "The format of string_to_sign query request body",
+              "type": "object",
+              "properties": {
+                "string_to_sign": {
+                  "type": "string"
+                },
+                "expires": {
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/QueryResponseBody"
+            }
+          },
+          "400": {
+            "description": "Fail",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "/string-to-sign/header": {
+      "post": {
+        "operationId": "HeaderStringToSign",
+        "summary": "Sign By Authorization Header",
+        "description": "Sign a well constructed string with Date",
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "request_body",
+            "in": "body",
+            "description": "A string to sign",
+            "required": true,
+            "schema": {
+              "description": "The format of string_to_sign header request body",
+              "type": "object",
+              "properties": {
+                "string_to_sign": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/HeaderResponseBody"
+            }
+          },
+          "400": {
+            "description": "Fail",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "QueryResponseBody": {
+      "description": "The format of query response body",
+      "type": "object",
+      "properties": {
+        "access_key_id": {
+          "type": "string"
+        },
+        "signature": {
+          "type": "string"
+        },
+        "expires": {
+          "type": "integer"
+        }
+      }
+    },
+    "HeaderResponseBody": {
+      "description": "The format of header response body",
+      "type": "object",
+      "properties": {
+        "authorization": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
