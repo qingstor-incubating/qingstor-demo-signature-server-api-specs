@@ -58,12 +58,12 @@ Content-Length: 272
    "host": "pek3a.qingstor.com",
    "port": "443",
    "path": "/signature-test-bucket",
-   "query":{
+   "query": {
         "prefix": "test"
    },
    "protocol": "https",
-   "headers":{
-       "Date" : "Wed, 16 Aug 2017 07:56:30 GMT",
+   "headers": {
+       "Date": "Wed, 16 Aug 2017 07:56:30 GMT",
        "Content-Length": "0",
        "User-Agent": "qingstor-sdk-go/2.2.6 (Go v1.8.3; linux_amd64_gc)"
     },
@@ -79,9 +79,9 @@ Date: Wed, 16 Aug 2017 07:56:30 GMT
 Connection: close
 
 {
-    "access_key_id":"BCJGERIHUBJTBOEBRFKT",
-    "signature":"yc5BeAHAXJ/3XjJb1YPucSX+NWAErY2kFJFj3n8t0us=",
-    "expires":1502870310
+    "access_key_id": "BCJGERIHUBJTBOEBRFKT",
+    "signature": "yc5BeAHAXJ/3XjJb1YPucSX+NWAErY2kFJFj3n8t0us=",
+    "expires": 1502870310
 }
 ```
 
@@ -103,8 +103,8 @@ Content-Length: 297
     "path": "/signature-test-bucket/put-test-file",
     "protocol": "https",
     "body": "put-test-file-content\n",
-    "headers":{
-       "Date" : "Wed, 16 Aug 2017 07:56:30 GMT",
+    "headers": {
+       "Date": "Wed, 16 Aug 2017 07:56:30 GMT",
        "Content-Length": "22",
        "User-Agent": "qingstor-sdk-go/2.2.6 (Go v1.8.3; linux_amd64_gc)"
     }
@@ -120,7 +120,7 @@ Date: Wed, 16 Aug 2017 07:56:30 GMT
 Connection: close
 
 {
-    "authorization":"QS BCJGERIHUBJTBOEBRFKT:Y3nmxKVj4GMCBgTAujwCa9iDUwToI5hmPjW3rDsu/yg="
+    "authorization": "QS BCJGERIHUBJTBOEBRFKT:Y3nmxKVj4GMCBgTAujwCa9iDUwToI5hmPjW3rDsu/yg="
 }
 ```
 
@@ -136,7 +136,7 @@ User-Agent: Go-http-client/1.1
 Content-Length: 99
 
 {
-    "string_to_sign":  "GET\n\n\n1502870311\n/signature-test-bucket/put-test-file",
+    "string_to_sign": "GET\n\n\n1502870311\n/signature-test-bucket/put-test-file",
     "expires": 1502870311
 }
 ```
@@ -150,9 +150,9 @@ Wed, 16 Aug 2017 07:56:32 GMT
 Connection: close
 
 {
-    "access_key_id":"BCJGERIHUBJTBOEBRFKT",
-    "signature":"ESMKCKSGMyhdZ8Mo+7DAGoL4PlEUnNqCYDrrW6fneAg=",
-    "expires":1502870311
+    "access_key_id": "BCJGERIHUBJTBOEBRFKT",
+    "signature": "ESMKCKSGMyhdZ8Mo+7DAGoL4PlEUnNqCYDrrW6fneAg=",
+    "expires": 1502870311
 }
 ```
 
@@ -181,7 +181,7 @@ Date: Wed, 16 Aug 2017 07:56:30 GMT
 Connection: close
 
 {
-    "authorization":"QS BCJGERIHUBJTBOEBRFKT:IgA9wFwuSy+OYvZskldV+bl4VgvH9UNXsAXqcqVFM/A="
+    "authorization": "QS BCJGERIHUBJTBOEBRFKT:IgA9wFwuSy+OYvZskldV+bl4VgvH9UNXsAXqcqVFM/A="
 }
 ```
 
