@@ -24,7 +24,7 @@ var JSONRefs = require('json-refs');
 
 var validator = new ZSchema();
 
-const swagger2Paths  = glob.sync(`${__dirname}/swagger/signature_server_api_specs.json`);
+const swagger2Paths  = glob.sync(`${__dirname}/swagger/qingstor-demo-signature-server-api-specs.json`);
 const swagger2Schema = fs.readFileSync(`${__dirname}/api_spec_schema_swagger_v2.0.json`);
 
 describe('API Spec (Swagger v2.0)', () => {
