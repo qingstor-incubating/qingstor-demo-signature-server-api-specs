@@ -8,18 +8,18 @@
   "schemes": [
     "http"
   ],
+  "produces": [
+    "application/json"
+  ],
+  "consumes": [
+    "application/json"
+  ],
   "paths": {
     "/operation/query": {
       "post": {
         "operationId": "QueryOperation",
         "summary": "Sign By Query Parameters",
         "description": "Sign a request to be signed from clients",
-        "produces": [
-          "application/json"
-        ],
-        "consumes": [
-          "application/json"
-        ],
         "parameters": [
           {
             "name": "request_body",
@@ -85,12 +85,6 @@
         "operationId": "HeaderOperation",
         "summary": "Sign By Authorization Header",
         "description": "Sign a request to be signed from clients",
-        "produces": [
-          "application/json"
-        ],
-        "consumes": [
-          "application/json"
-        ],
         "parameters": [
           {
             "name": "request_body",
@@ -153,12 +147,6 @@
         "operationId": "QueryStringToSign",
         "summary": "Sign By Query Parameters",
         "description": "Sign a well constructed string with Expires",
-        "produces": [
-          "application/json"
-        ],
-        "consumes": [
-          "application/json"
-        ],
         "parameters": [
           {
             "name": "request_body",
@@ -200,12 +188,6 @@
         "operationId": "HeaderStringToSign",
         "summary": "Sign By Authorization Header",
         "description": "Sign a well constructed string with Date",
-        "produces": [
-          "application/json"
-        ],
-        "consumes": [
-          "application/json"
-        ],
         "parameters": [
           {
             "name": "request_body",
