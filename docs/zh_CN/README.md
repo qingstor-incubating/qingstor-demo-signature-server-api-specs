@@ -1,4 +1,6 @@
 # 签名服务器接口规范文档
+[![Build Status](https://travis-ci.org/Colin0114/qingstor-demo-signature-server-api-specs.svg?branch=add_travis_ci)](https://travis-ci.org/Colin0114/qingstor-demo-signature-server-api-specs)
+
 [English](../../README.md) | 中文
 
 本文主要描述了签名服务器的接口。

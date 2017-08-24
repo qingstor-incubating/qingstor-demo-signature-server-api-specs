@@ -1,5 +1,7 @@
 # QingStor Demo Signature Server API Specs
-English | [中文](./docs/zh_CN/README.zh_CN.md)
+[![Build Status](https://travis-ci.org/Colin0114/qingstor-demo-signature-server-api-specs.svg?branch=add_travis_ci)](https://travis-ci.org/Colin0114/qingstor-demo-signature-server-api-specs)
+
+English | [中文](./docs/zh_CN/README.md)
 
 Specifications of QingStor Demo Signature Server API.
 
